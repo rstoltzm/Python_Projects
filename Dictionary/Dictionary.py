@@ -29,3 +29,7 @@ if type(definition) == list:
         print(item)
 else:
     print(definition)
+
+print()
+close = input("Press Enter to close")
+
