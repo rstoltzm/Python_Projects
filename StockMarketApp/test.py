@@ -4,6 +4,7 @@ import random
 Close = 65
 print(Close)
 
+
 for x in range(10):
     date = dt.date(2007, 12, 5) + dt.timedelta(days=x)
     r = random.randint(-2,2)
@@ -14,8 +15,5 @@ for x in range(10):
     Open = Close
     Open = Open + r
     print('BBB', date, Close , High , Low , Open , Volume)
-
-print(Close)
-print(High)
 
 #(Symbol, Date, Close , High , Low , Open , Volume ))
