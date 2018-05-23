@@ -43,10 +43,13 @@ class StockLoader():
             Open = Open + r
             database.insert(ticker, date, Close , High , Low , Open , Volume)
 
-print('\nPre-Change')
-pprint.pprint(database.view_ticker('PIT'))
-pprint.pprint(database.update_ticker())
+    def Pandas_Loader(self):
+        df = database.sql_to_dataframe()
+        pprint.pprint(df)
 
+#print('\nPre-Change')
+#print(database.update_ticker())
+#pprint.pprint(database.view_ticker('PIT'))
 
 #Useful Commands
 #pprint.pprint(database.view())
@@ -54,7 +57,8 @@ pprint.pprint(database.update_ticker())
 #database.insert('BBB', '2018-04-22', 65 , 70 , 55 , 62 , 8000)
 #stockloader.AddRandomData('BIO', 79)
 #ticker=['QQQ','SPY','AAPL','AMZN','MSFT','FB','GOOGL','GOOG','INTC','CSCO']
-#ticker=['QQQ','SPY']
+ticker=['QQQ','SPY']
 
-#stockloader = StockLoader(ticker)
+stockloader = StockLoader(ticker)
 #stockloader.loader()
+stockloader.Pandas_Loader()
