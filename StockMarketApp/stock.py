@@ -8,6 +8,8 @@ import random
 
 database=Database("stock.db")
 
+print("testing git in atom")
+
 class StockLoader():
 
     def __init__(self, ticker):
