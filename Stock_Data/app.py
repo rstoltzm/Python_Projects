@@ -3,13 +3,13 @@ from database import Database
 import csv
 import os
 
-Database.initialise(database="stock_data",user="postgres",password="postgres1234", host="localhost")
+Database.initialise(database="stock_data",user="user",password="pass", host="localhost")
 
-for subfile in os.walk("C:\\Users\\rstoltzm\\Desktop\\Coding\\_Projects\\Stock_Analysis\\ETFs\\"):
+for subfile in os.walk("C:\\Users\\"):
     file_list = subfile[2]
     for file in file_list:
         print(file)
-        with open(os.path.join("C:\\Users\\rstoltzm\\Desktop\\Coding\\_Projects\\Stock_Analysis\\ETFs\\",file)) as csvfile:
+        with open(os.path.join("C:\\Users\\",file)) as csvfile:
             text_file = csv.reader(csvfile)
             next(text_file, None)
             for row in text_file:
